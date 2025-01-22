@@ -40,8 +40,8 @@ export function ResponsiveDrawer({ children }: { children: React.ReactNode }) {
         </SheetTrigger>
         <SheetContent className="sm:max-w-[425px]">
           <SheetHeader>
-            <SheetTitle>Key Points From Page</SheetTitle>
-            <SheetDescription>Generative AI is Experimental</SheetDescription>
+            <SheetTitle>本页要点</SheetTitle>
+            <SheetDescription>生成式Ai尚处于实验阶段</SheetDescription>
           </SheetHeader>
           <div className="mt-4">{children}</div>
         </SheetContent>
@@ -58,15 +58,15 @@ export function ResponsiveDrawer({ children }: { children: React.ReactNode }) {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
-          <DrawerTitle>Key Points From Page</DrawerTitle>
-          <DrawerDescription>Generative AI is Experimental</DrawerDescription>
+          <DrawerTitle>本页要点</DrawerTitle>
+          <DrawerDescription>生成式Ai尚处于实验阶段</DrawerDescription>
         </DrawerHeader>
         <div className="p-4 border-t border-zinc-100 bg-gradient-to-b from-purple-50 via-purple-50 to-white overflow-auto max-h-80">
           {children}
         </div>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline">取消</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
