@@ -27,7 +27,7 @@ const Ad: React.FC<AdProps> = ({ link, onClickTrack, adStart, adEnd }) => {
             <XIcon size={16} />
           </button>
           <h1 className="font-bold">
-            smry.ai -{" "}
+            SoSo.Fan -{" "}
             <span className="font-normal">{adStart}{" "}
             <a
               className="font-bold underline"
