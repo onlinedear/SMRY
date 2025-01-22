@@ -155,26 +155,7 @@ export default async function Page({
           <main className="prose">
             {url ? (
               <>
-                <div className="flex items-center justify-between bg-[#FBF8FB] p-2 rounded-lg shadow-sm mb-4 border-zinc-100 border">
-                  <h2 className="ml-4 mt-0 mb-0 text-sm font-semibold text-gray-600">
-                    了解文章概要
-                  </h2>
-                  <ResponsiveDrawer>
-                    <Suspense
-                      key={"summary"}
-                      fallback={
-                        <Skeleton
-                          className="h-32 rounded-lg animate-pulse bg-zinc-200"
-                          style={{ width: "100%" }}
-                        />
-                      }
-                    >
-                      <div className="remove-all">
-                        <SummaryForm urlProp={url} ipProp={ip} />
-                      </div>
-                    </Suspense>
-                  </ResponsiveDrawer>
-                </div>
+
                 <ArrowTabs
                   sources={sources}
                   lengthDirect={
