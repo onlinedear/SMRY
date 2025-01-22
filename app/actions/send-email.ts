@@ -23,7 +23,7 @@ export async function sendEmail(formData: {
 
     return { success: true };
   } catch (error) {
-    console.error("Error sending email:", error);
-    return { success: false, error: "Failed to send email" };
+    console.error("发送电子邮件时出错:", error);
+    return { success: false, error: "发送电子邮件失败" };
   }
 }
