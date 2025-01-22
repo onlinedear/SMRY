@@ -27,7 +27,7 @@ export const BookmarkletComponent = () => {
             </span>
 
             <span className="group-hover:text-slate-300 transition-colors duration-500 ease-in-out">
-              with smry.ai
+              with soso.fan
             </span>
           </div>
         </div>
