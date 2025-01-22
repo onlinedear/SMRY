@@ -15,7 +15,7 @@ export async function getSummary(formData: FormData) {
     const ip = formData.get("ip") as string;
 
     if (!url) {
-      return "URL parameter is missing or invalid";
+      return "URL 参数缺失或无效";
     }
 
     const dailyRatelimit = new Ratelimit({
@@ -33,10 +33,10 @@ export async function getSummary(formData: FormData) {
 
     if (process.env.NODE_ENV != "development") {
       if (!dailySuccess) {
-        return "Your daily limit of 20 summaries has been reached. Please return tomorrow for more summaries.";
+        return "您已达到每日 20 篇摘要的上限。请明天再来查看更多摘要。";
       }
       if (!minuteSuccess) {
-        return "Your limit of 6 summaries per minute has been reached. Please slow down.";
+        return "已达到每分钟 6 篇摘要的限制。请放慢速度。";
       }
     }
 
@@ -53,7 +53,7 @@ export async function getSummary(formData: FormData) {
     }
 
     if (text.length < 2200) {
-      return "Text is short to be summarized";
+      return "文字短小，难以概括";
     }
 
     const openaiResponse = await openai.chat.completions.create({
