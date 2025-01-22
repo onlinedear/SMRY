@@ -48,7 +48,7 @@ const TopBar = () => {
           className="absolute inset-x-0 h-px origin-left bg-gray-300"
           style={{ transform: "scaleX(1)" }}
         ></div>
-        {/* Render the Scroll Progress component */}
+        {/* 渲染滚动进度组件 */}
         <ScrollProgress progress={progress} />
       </div>
       <div
