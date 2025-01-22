@@ -39,7 +39,7 @@ export const ArticleContent: React.FC<ArticleContentProps> = async ({
     content = await getData(url, source);
   } catch (err) {
     console.error(err);
-    return <div>Error loading data</div>;
+    return <div>加载数据时出错</div>;
   }
 
   return (
@@ -56,12 +56,12 @@ export const ArticleContent: React.FC<ArticleContentProps> = async ({
           {content.article?.title && <h1>{content.article.title}</h1>}
           {!content.article?.content && (
             <div className="mt-10 flex items-center space-x-2">
-              <p className="text-gray-600">Article could not be retrieved.</p>
+              <p className="text-gray-600">无法检索文章。</p>
             </div>
           )}
           <div className="leading-3 text-gray-600 flex space-x-4 items-center -ml-4 -mt-4 flex-wrap">
             <div className="flex items-center mt-4 ml-4 space-x-1.5">
-              <ShareButton url={`https://smry.ai/${url}`} />
+              <ShareButton url={`https://soso.fan/${url}`} />
             </div>
             <div className="flex items-center mt-4 ml-4 space-x-1.5">
               <GlobeAltIcon className="w-4 h-4 text-gray-600" />
@@ -102,7 +102,7 @@ export const ArticleContent: React.FC<ArticleContentProps> = async ({
             />
           ) : (
             <div className="mt-10 flex items-center space-x-2">
-              <p className="text-gray-600">Content not available.</p>
+              <p className="text-gray-600">内容不可用</p>
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -113,8 +113,8 @@ export const ArticleContent: React.FC<ArticleContentProps> = async ({
                     />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Error: {content.error || "Unknown error occurred."}</p>
-                    <p>There was an issue retrieving the content.</p>
+                    <p>Error: {content.error || "发生未知错误。"}</p>
+                    <p>检索内容时出现问题。</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
