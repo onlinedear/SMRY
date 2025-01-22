@@ -1,14 +1,14 @@
 export const BookmarkletComponent = () => {
 
     const handleDragStart = (event: { dataTransfer: { setData: (arg0: string, arg1: string) => void; }; }) => {
-        event.dataTransfer.setData('text/plain', "javascript:(function(){window.location.href='https://smry.ai/'+window.location.href;})();");
+        event.dataTransfer.setData('text/plain', "javascript:(function(){window.location.href='https://soso.fan/'+window.location.href;})();");
       };
   return (
     <section className="hidden sm:block relative z-0 mt-16 bg-stone-50 rounded-xl border  border-zinc-200 hover:bg-black transition-all duration-500"
     aria-hidden="true"
     onDragStart={handleDragStart}
     draggable="true"
-    aria-label="Drag this to your bookmarks bar for quick summaries"
+    aria-label="将其拖到书签栏即可快速查看摘要"
     >
       <div className="w-full max-w-5xl mx-auto px-4 md:px-6 py-4 rounded-xl">
         <div className="text-center">
