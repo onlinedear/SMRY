@@ -15,7 +15,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url }) => {
     let shareUrl = '';
     switch (platform) {
       case 'email':
-        shareUrl = `mailto:?subject=I wanted to share this with you&body=${url}`;
+        shareUrl = `mailto:?subject=我想和你分享这个网址&body=${url}`;
         break;
       case 'facebook':
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
