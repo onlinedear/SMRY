@@ -69,21 +69,13 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24 text-black mt-28 sm:mt-0 bg-[#FAFAFA]">
         <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto z-10 sm:mt-16">
-          <a
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-gray-600 shadow-sm transition-colors hover:bg-gray-100 mb-10 mr-4"
-            href="https://github.com/mrmps/SMRY"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github />
-            <p>Star on GitHub</p>
-          </a>
+
           <h1 className="text-4xl font-semibold text-center text-black md:text-5xl">
             <Image
               src="/logo.svg"
               width={280}
               height={280}
-              alt={"smry logo"}
+              alt={"soso logo"}
               className="-ml-4"
             />
           </h1>
@@ -142,10 +134,10 @@ export default function Home() {
             </div>
           </form>
           <h2 className="w-full text-center text-stone-700 mt-4">
-            Remove paywalls, ads, and popups from any website and instantly get the{" "}
+            立即获得删除任何网站的付费墙、广告和弹出窗口{" "}
             <Link href="/proxy?url=https://www.theatlantic.com/technology/archive/2017/11/the-big-unanswered-questions-about-paywalls/547091">
               <span className="border-b border-gray-400 transition-border duration-300 hover:border-black">
-                summary.
+                总结
               </span>
             </Link>
           </h2>
@@ -163,7 +155,7 @@ export default function Home() {
                   fontSize: "0.875rem",
                 }}
               >
-                https://smry.ai/
+                https://soso.fan/
                 <span
                   className="bg-[#FBF719] text-gray-700 px-2 py-1 rounded"
                   style={{ fontWeight: "500" }}
@@ -180,7 +172,7 @@ export default function Home() {
               role="alert"
             >
               <ExclamationCircleIcon className="h-5 w-5 mr-2 text-red-500" />
-              Please enter a valid URL (e.g., https://example.com).
+              请输入有效的 URL（例如，https://example.com）。
             </p>
           )}
         </div>
@@ -189,33 +181,33 @@ export default function Home() {
         <Banner />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <CardSpotlight
-            heading="Quick Summaries"
-            body="Get concise summaries of long articles in seconds."
+            heading="快速摘要"
+            body="几秒钟内获取长文章的简洁摘要。"
             icon={<DocumentTextIcon className="h-4 w-4 text-neutral-600" />}
           />
           <CardSpotlight
-            heading="Paywall Bypass"
-            body="Access content behind paywalls without hassle."
+            heading="绕开付费"
+            body="无需烦恼即可访问付费墙后的内容。"
             icon={<Unlock className="h-4 w-4 text-neutral-600" />}
           />
           <CardSpotlight
-            heading="AI Powered"
-            body="Leverage advanced AI to understand content contextually."
+            heading="AI 驱动"
+            body="利用先进的 AI 理解内容上下文。"
             icon={<LightBulbIcon className="h-4 w-4 text-neutral-600" />}
           />
           <CardSpotlight
-            heading="Browser Friendly"
-            body="Easily use our tool with your favorite web browser."
+            heading="浏览器友好"
+            body="轻松使用您喜欢的网络浏览器使用我们的工具。"
             icon={<Globe className="h-4 w-4 text-neutral-600" />}
           />
           <CardSpotlight
-            heading="Save Time"
-            body="Read less, learn more. Save time on extensive articles."
+            heading="节省时间"
+            body="阅读更少，学习更多。节省大量文章的时间。"
             icon={<ClockIcon className="h-4 w-4 text-neutral-600" />}
           />
           <CardSpotlight
-            heading="User-Friendly Interface"
-            body="Enjoy a seamless, intuitive interface for easy navigation."
+            heading="用户友好界面"
+            body="享受无缝直观的界面，轻松导航。"
             icon={<UserCircleIcon className="h-4 w-4 text-neutral-600" />}
           />
         </div>
