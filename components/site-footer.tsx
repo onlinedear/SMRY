@@ -23,7 +23,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              michael_chomsky
+              Steven
             </a>
             . Hosted on{" "}
             <a
@@ -34,16 +34,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               Vercel
             </a>
-            . The source code is available on{" "}
-            <a
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </a>
-            .
+           
           </p>
         </div>
         <p className="text-center text-sm leading-loose md:text-left">
