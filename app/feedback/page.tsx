@@ -39,7 +39,7 @@ export default function Page() {
           <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-sm border border-gray-200">
             <div className="space-y-8">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold">I value your feedback</h2>
+                <h2 className="text-3xl font-bold">我很期待您的反馈</h2>
                 <p className="text-zinc-700 dark:text-zinc-400">
 嗨！我是 Mike。
 我很想听听你的想法——每一点都很重要！想要查看整页而不是片段？更清楚地了解信息来源？也许是一些很酷的 AI 技巧，或者只是更可靠的体验？告诉我你的想法；这一切都会有所不同！
