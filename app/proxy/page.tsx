@@ -22,64 +22,64 @@ export const dynamic = "force-dynamic";
 const adCopies = [
   {
     onClickTrack:
-      "Enjoy the freedom of reading without barriers, buy me a coffee! click",
-    adStart: "Enjoy the freedom of reading without barriers, ",
-    adEnd: "buy me a coffee!",
+      "享受无障碍阅读的自由，请我喝杯咖啡！点击",
+    adStart: "享受无障碍阅读的自由， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Love instant summaries? Keep us going with a coffee! click",
-    adStart: "Love instant summaries? ",
-    adEnd: "Keep us going with a coffee!",
+    onClickTrack: "喜欢即时摘要？喝杯咖啡，让我们继续前进！点击",
+    adStart: "喜欢即时摘要吗？ ",
+    adEnd: "喝杯咖啡让我们继续前行！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Unlock premium content effortlessly, buy me a coffee! click",
-    adStart: "Unlock premium content effortlessly, ",
-    adEnd: "buy me a coffee!",
+    onClickTrack: "轻松解锁优质内容，请我喝杯咖啡！点击",
+    adStart: "轻松解锁优质内容， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Support our ad-free experience, buy me a coffee! click",
-    adStart: "Support our ad-free experience, ",
-    adEnd: "buy me a coffee!",
+    onClickTrack: "支持我们的无广告体验，请我喝杯咖啡！点击",
+    adStart: "支持我们的无广告体验， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
     onClickTrack:
-      "Keep enjoying clutter-free summaries, buy me a coffee! click",
-    adStart: "Keep enjoying clutter-free summaries, ",
-    adEnd: "buy me a coffee!",
+      "继续享受简洁的摘要，请我喝杯咖啡！点击",
+    adStart: "继续享受简洁的摘要， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Enjoy ad-free summaries? Buy me a coffee! click",
-    adStart: "Enjoy ad-free summaries? ",
-    adEnd: "Buy me a coffee!",
+    onClickTrack: "想享受无广告摘要吗？请我喝杯咖啡！点击",
+    adStart: "享受无广告的摘要吗？",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Help us keep paywalls at bay, buy me a coffee! click",
-    adStart: "Help us keep paywalls at bay, ",
-    adEnd: "buy me a coffee!",
+    onClickTrack: "帮助我们消除付费墙，请我喝杯咖啡！点击",
+    adStart: "帮助我们消除付费墙， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Support seamless reading, buy me a coffee! click",
-    adStart: "Support seamless reading, ",
-    adEnd: "buy me a coffee!",
+    onClickTrack: "支持无缝阅读，请我喝杯咖啡！点击",
+    adStart: "支持无缝阅读， ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Enjoy uninterrupted reading? Buy me a coffee! click",
-    adStart: "Enjoy uninterrupted reading? ",
-    adEnd: "Buy me a coffee!",
+    onClickTrack: "想不受干扰地阅读？请我喝杯咖啡！点击",
+    adStart: "享受不间断的阅读吗？ ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
   {
-    onClickTrack: "Keep getting summaries fast, buy me a coffee! click",
-    adStart: "Keep getting summaries fast, ",
-    adEnd: "buy me a coffee!",
+    onClickTrack: "继续快速获取摘要，请我喝杯咖啡！点击",
+    adStart: "继续快速获取摘要, ",
+    adEnd: "请我喝杯咖啡！",
     link: "https://www.buymeacoffee.com/jotarokujo",
   },
 ];
@@ -113,12 +113,12 @@ export default async function Page({
   const headersList = headers();
   const ip = headersList.get("x-real-ip") || "default_ip";
 
-  // error is here, searchParams are empty in production
+  // 此处出现错误，生产中的 searchParams 为空
 
   const url = searchParams?.url as string;
 
   if (!url) {
-    // Handle the case where URL is not provided or not a string
+    // 处理未提供 URL 或不是字符串的情况
     console.error(
       "URL parameter is missing or invalid",
       url,
@@ -127,12 +127,12 @@ export default async function Page({
     );
   }
 
-  // if the url contains "orlandosentinel.com" then we should return nothing and let the user know that the orlando sentinel article is not available
+  // 如果 URL 包含“orlandosentinel.com”，那么我们不应该返回任何内容，并让用户知道 orlando sentinel 文章不可用
 
   if (url?.includes("orlandosentinel.com")) {
     return (
       <div className="mt-20">
-        Sorry, articles from the orlando sentinel are not available
+        抱歉，来自 orlando sentinel 的文章不可用
       </div>
     );
   }
@@ -157,7 +157,7 @@ export default async function Page({
               <>
                 <div className="flex items-center justify-between bg-[#FBF8FB] p-2 rounded-lg shadow-sm mb-4 border-zinc-100 border">
                   <h2 className="ml-4 mt-0 mb-0 text-sm font-semibold text-gray-600">
-                    Get AI-powered key points
+                    了解文章概要
                   </h2>
                   <ResponsiveDrawer>
                     <Suspense
@@ -181,8 +181,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from direct source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -195,8 +194,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from wayback source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -209,8 +207,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from jina.ai source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -223,8 +220,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from archive source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -237,8 +233,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from direct source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -251,8 +246,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from wayback source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -265,8 +259,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from jina.ai source, refresh the page
-                          to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
@@ -279,8 +272,7 @@ export default async function Page({
                     <ErrorBoundary
                       fallback={
                         <div>
-                          Could not fetch from archive.is source, refresh the
-                          page to try again
+                          无法从直接来源获取，请刷新页面重试
                         </div>
                       }
                     >
