@@ -28,10 +28,10 @@ export default function Error({
               id="error-title"
               className="mb-4 text-xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"
             >
-              Oops, something went wrong
+              哎呀！出事了
             </h2>
             <p className="text-sm leading-7 text-zinc-600 dark:text-zinc-300">
-              We&apos;ve logged the issue and are working on it. Click{" "}
+              我们已经记录了该问题并正在处理。点击{" "}
               <button
                 className={`cursor-pointer underline decoration-from-font underline-offset-2 hover:opacity-80`}
                 onClick={() => {
@@ -39,23 +39,21 @@ export default function Error({
                   reset();
                 }}
               >
-                here
+                这里
               </button>{" "}
-              to try again, or{" "}
+              尝试重试或者{" "}
               <UnderlineLink href="/" text="read something else" />.
             </p>
             <p className="text-sm leading-7 text-zinc-600 dark:text-zinc-300 mt-3">
-              Some providers still do not work with smry.ai. We are improving
-              every day, but if the site you are trying to read is protected by
-              a{" "}
+              一些提供商仍然无法与 SoSo.Fan 合作。我们每天都在改进，但如果您尝试阅读的网站或许{" "}
               <UnderlineLink
                 href="https://www.zuora.com/guides/what-is-a-hard-paywall/"
                 text="hard paywall"
               />{" "}
-              there is nothing we can do.
+              我们无能为力。
             </p>
             <p className="mt-6 text-sm leading-7 text-zinc-800 dark:text-zinc-100">
-              Questions?{" "}
+              反馈意见?{" "}
               <UnderlineLink href="/feedback" text="send us feedback" />.
             </p>
           </div>
