@@ -134,12 +134,7 @@ export default function Home() {
             </div>
           </form>
           <h2 className="w-full text-center text-stone-700 mt-4">
-            立即获得删除任何网站的付费墙、广告和弹出窗口{" "}
-            <Link href="/proxy?url=https://www.theatlantic.com/technology/archive/2017/11/the-big-unanswered-questions-about-paywalls/547091">
-              <span className="border-b border-gray-400 transition-border duration-300 hover:border-black">
-                总结
-              </span>
-            </Link>
+            立即获得删除任何网站的付费墙、广告和弹出窗口
           </h2>
 
           <h3 className="mt-24 text-center text-lg font-semibold text-gray-800">
