@@ -1,16 +1,16 @@
 "use client";
 
 import React from 'react';
-import { Button } from './ui/button'; // Update with the correct import path
+import { Button } from './ui/button'; // 使用正确的导入路径进行更新
 import { Share2 as ShareIcon, Copy as CopyIcon, Mail as EmailIcon, Facebook as FacebookIcon, X as CloseIcon, MessageCircle as TelegramIcon } from 'lucide-react';
-import { Popover, PopoverTrigger, PopoverContent } from './ui/popover'; // Update with the correct import path
+import { Popover, PopoverTrigger, PopoverContent } from './ui/popover'; // 使用正确的导入路径进行更新
 
 interface ShareButtonProps {
     url: string;    
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({ url }) => {
-  // Define the sharing functionality for each social media platform
+  // 定义每个社交媒体平台的共享功能
   const socialShare = (platform: string) => {
     let shareUrl = '';
     switch (platform) {
@@ -34,7 +34,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url }) => {
   // Function to copy the link to clipboard
   const copyToClipboard = () => {
     navigator.clipboard.writeText(url);
-    alert('Link copied to clipboard!');
+    alert('链接已复制到剪贴板！');
   };
 
   return (
@@ -42,14 +42,14 @@ const ShareButton: React.FC<ShareButtonProps> = ({ url }) => {
       <PopoverTrigger asChild>
         <Button variant="outline" className="flex items-center rounded-full">
           <ShareIcon className="h-3 w-3" />
-          <span className="ml-2">Share</span>
+          <span className="ml-2">分享</span>
         </Button>
       </PopoverTrigger>
       <PopoverContent className="rounded-lg shadow-lg p-2 flex flex-col bg-white text-black">
         <div className="text-sm mb-2 ml-2 font-semibold">Share article cache</div>
         <Button variant="outline" className="flex items-center justify-start p-2 m-1 text-xs" onClick={copyToClipboard}>
           <CopyIcon className="h-4 w-4 mr-2" />
-          Copy Link
+          复制链接
         </Button>
         <Button variant="outline" className="flex items-center justify-start p-2 m-1 text-xs" onClick={() => socialShare('email')}>
           <EmailIcon className="h-4 w-4 mr-2" />
