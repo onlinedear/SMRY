@@ -10,7 +10,7 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "smry.ai",
+  name: "soso.fan",
   description:
     "一个开源付费墙绕过网站，具有即时人工智能摘要",
   url: "https://soso.fan",
