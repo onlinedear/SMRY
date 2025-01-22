@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   openGraph: {
     type: "website",
-    title: "Smry | AI Summarizer and Free Paywall Remover",
-    siteName: "smry.ai",
-    url: "https://smry.ai",
+    title: "SoSo.Fan | AI 摘要和免费付费墙移除器",
+    siteName: "soso.fan",
+    url: "https://soso.fan",
     description:
-      "Remove paywalls and summarize articles for free, covering NYT, Washington Post & more. Instant access to content without login for faster insights.",
+      "移除付费墙并免费总结文章，涵盖纽约时报、华盛顿邮报等。无需登录即可即时访问内容，获得更快的见解。",
   },
 };
 
