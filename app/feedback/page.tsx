@@ -24,9 +24,9 @@ export default function Page() {
     e.preventDefault();
     const response = await sendEmail(emailData);
     if (response.success) {
-      alert("Email sent successfully!");
+      alert("电子邮件发送成功！");
     } else {
-      alert(response.error || "Failed to send email");
+      alert(response.error || "发送电子邮件失败");
     }
   };
 
@@ -41,51 +41,47 @@ export default function Page() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">I value your feedback</h2>
                 <p className="text-zinc-700 dark:text-zinc-400">
-                  Hey there! I&apos;m Mike.
-                  I&apos;d love to hear what you think—every little bit counts! Want
-                  a full-page view instead of snippets? Clearer info on where
-                  the info comes from? Maybe some cool AI tricks or just a more
-                  reliable experience? Tell me what&apos;s on your mind; it all makes
-                  a difference!
+嗨！我是 Mike。
+我很想听听你的想法——每一点都很重要！想要查看整页而不是片段？更清楚地了解信息来源？也许是一些很酷的 AI 技巧，或者只是更可靠的体验？告诉我你的想法；这一切都会有所不同！
                 </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">
-                    Email (Optional. Only if you need a response)
+                    电子邮件（可选。仅当您需要回复时）
                   </Label>
                   <Input
                     id="email"
                     name="from"
-                    placeholder="Enter your email (optional)"
+                    placeholder="输入您的电子邮件（可选）"
                     type="email"
                     value={emailData.from}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
+                  <Label htmlFor="subject">主题</Label>
                   <Input
                     id="subject"
                     name="subject"
-                    placeholder="Enter the subject"
+                    placeholder="输入主题"
                     value={emailData.subject}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message">内容</Label>
                   <Textarea
                     className="min-h-[100px]"
                     id="message"
                     name="message"
-                    placeholder="Enter your message"
+                    placeholder="输入你的内容"
                     value={emailData.message}
                     onChange={handleChange}
                   />
                 </div>
                 <Button className="w-full" type="submit">
-                  Submit
+                  提交
                 </Button>
               </form>
             </div>
